@@ -1,0 +1,1190 @@
+/*ESTILO GERAL*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+
+body{
+
+    /*CODIGO ANTERIOR
+
+    background-color: #1E5FCB;
+    height: 100vh;
+
+    FINAL CODIGO ANTERIOR*/
+
+    background-color: transparent !important; /* Torna transparente para o vídeo de fundo aparecer */
+    min-height: 100vh;
+}
+
+/* ==========================================
+   ESTILOS DO VÍDEO DE FUNDO DA PÁGINA INTEIRA
+   ========================================== */
+.bg-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -999; /* Joga o vídeo para o fundo de todos os elementos */
+}
+
+.bg-video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre toda a tela sem distorcer o vídeo */
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.85); /* Camada escura translúcida para legibilidade dos textos */
+    z-index: -998;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+
+
+.btn-contato button, 
+button, 
+.btn-dash, 
+.btn-cypher-primario, 
+.btn-cypher-secundario, 
+ .btn-contato button {
+    padding: 10px 28px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    cursor: pointer;
+    border: 2px solid #fff !important;
+    border-radius: 4px !important;
+    
+    /* Mágica do texto vazado: */
+    background: #fff !important; /* Cor de fundo do botão */
+    color: transparent !important; /* Torna a cor original da fonte transparente */
+    -webkit-background-clip: text !important; /* Clipa o fundo no formato das letras */
+    background-clip: text !important;
+    
+    transition: all 0.3s ease !important;
+}
+/*ESTILO GERAL FINAL*/
+
+
+
+
+/* ESTILO DO CABEÇALHO */
+
+.flex{
+    display: flex;
+}
+
+header {
+    
+    padding: 5px 4%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color:transparent; 
+
+
+    /*background-color: #16458D; cor original da nav bar */ 
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+
+
+    padding: 5px 4%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+   
+}
+
+header a:hover {
+    color: #fff;
+    transform: scale(1.15);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+header nav ul li {
+    list-style-type: none;
+    display: block;
+}
+
+header nav ul li a {
+    white-space: nowrap;
+}
+
+ .btn-contato button:hover{
+    box-shadow: 0px 0px 10px #ffffff8c;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+/* LOGO */
+header .logo img {
+    
+
+
+
+    width: 120px;
+    height: auto;
+    display: block;
+}
+/* LOGO FINAL */
+
+
+/* ESTILO DO CABEÇALHO FINAL*/
+
+
+
+
+/* ESTILO DO TOPO */
+
+section.topo-do-site{
+     padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+
+.topo-do-site .txt-topo-site h1{
+    color: #fff;
+    font-size: 40px;
+    line-height: 40px;       
+    margin-bottom: 20px;
+}
+
+.topo-do-site .txt-topo-site h2{
+    color: #fff;
+    font-size: 25px;
+    line-height: 40px;  
+    margin-bottom: 20px;         
+}
+
+
+.topo-do-site .txt-topo-site p{
+    color: #8bb8ff;
+    margin:20px 0px;
+
+}
+
+
+
+
+/* ESTILO DA IMAGEM */
+
+.topo-do-site .img-topo-site img {
+    width: 612px;
+    height: 410px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+
+    animation: entradaImagem 1.2s ease-out both;
+}
+
+@keyframes entradaImagem {
+
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 5;
+        transform: translateX(0);
+    }
+
+}
+
+/* FINAL ESTILO DA IMAGEM */
+
+
+
+/* FINAL ESTILO DO TOPO */
+
+
+
+
+
+
+
+
+/* ESTILO DO MEIO*/
+section.especialidades{
+     padding: 40px 4%;
+}
+
+section.especialidades .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.especialidades .interface h1{
+    color: #fff;
+    font-size: 40px;
+    line-height: 40px;       
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+
+/* ESTILO DO VIDEO*/
+.especialidades .flex {
+    display: flex;
+    flex-direction: column;   /* Empilha o vídeo e o texto (um embaixo do outro) */
+    align-items: center;       /* Centraliza TUDO (vídeo e texto) no meio da tela */
+    justify-content: center;
+    width: 100%;
+}
+
+/* 1. Alinha a caixinha do vídeo com o bloco de conteúdo da página */
+.especialidades .flex .img-problema {
+    width: 100%;          /* Garante que continue encostando nas laterais */
+    
+    /* ALTERE A ALTURA AQUI: */
+    height: 450px;        /* Defina aqui a altura baixa que você deseja (ex: 400px, 450px, 500px) */
+    
+    overflow: hidden; /* Espaço em relação ao texto de baixo */
+
+    border-radius: 8px;
+    
+
+    margin-top: 20px;    /* Espaço de cima (em relação ao título h1) */
+    margin-bottom: 0px;
+}
+
+/* 2. Faz o vídeo ocupar todo o espaço dessa linha, alinhando com o topo */
+.especialidades .flex .img-problema video {
+    width: 100%;          /* Ocupa a largura total permitida pela página */
+    height: 450px;         /* Mantém a proporção do vídeo */
+    overflow: hidden;
+    border-radius: 8px;   /* Opcional: deixa as bordas combinando com seu layout */
+    margin-top: 20px;
+    margin-bottom: 0px;
+     object-fit: cover;
+}
+/*ESTILO FINAL VIDEO*/
+
+
+
+
+
+
+
+.especialidades .flex h2 {
+    color: #fff;
+    font-size: 30px;
+    line-height: 40px;  
+    margin-bottom: 0px;   
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.especialidades .interface p{
+    color: #8bb8ff;
+    margin:20px 0px;
+    
+}
+
+/* FINAL ESTILO DO MEIO*/
+
+
+
+
+
+/* ==========================================
+   ESTILO DO CARROSSEL (Corrigido para o Vídeo)
+   ========================================== */
+
+.slider {
+    margin: 30px 0;
+    width: 612px;
+    height: 410px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    background-color: rgba(15, 23, 42, 0.8); /* Fundo com opacidade */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.slider .slides {
+    width: 300%; 
+    height: 100%;
+    display: flex;
+}
+
+.slider .slides input {
+    display: none; 
+}
+
+.slider .slide {
+    width: 33.333%; 
+    height: 100%;
+    position: relative;
+    transition: 0.6s ease-in-out; 
+}
+
+.slider .slide img {
+    width: 612px;
+    height: 410px;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+}
+
+/* NAVEGAÇÃO MANUAL (Bolinhas - Garante que aparecem na frente de tudo) */
+.manual-navigation {
+    position: absolute;
+    width: 100%;
+    bottom: 4px; /* Subiu um pouco para não cortar no fundo */
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    z-index: 50; /* Aumentado para ficar na frente da imagem */
+}
+
+.manual-btn {
+    border: 2px solid #ffffff;
+    padding: 3px; /* Tamanho ajustado para facilitar a visualização */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: rgba(15, 23, 42, 0.7); /* Fundo escuro com contorno branco visível */
+}
+
+.manual-btn:hover {
+    background-color: #ffffff;
+    transform: scale(1.3);
+}
+
+/* LÓGICA DE TROCA DOS SLIDES (Radio) */
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -33.333%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -66.666%;
+}
+
+/* NAVEGAÇÃO AUTOMÁTICA (Indicadores) */
+.navigation-auto {
+    position: absolute;
+    width: 100%;
+    bottom: 4px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    z-index: 45;
+}
+
+.navigation-auto div {
+    border: 2px solid transparent;
+    padding: 3px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1,
+#radio2:checked ~ .navigation-auto .auto-btn2,
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: #ffffff;
+}
+
+
+
+
+
+/* Layout Lado a Lado (Carrossel na esquerda, texto na direita) */
+.flex-carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+/* Evita que o carrossel sofra alterações de tamanho */
+.flex-carrossel .slider {
+    margin: 0 !important;
+    flex-shrink: 0;
+}
+
+/* Estilo do bloco de texto alinhado à direita */
+.txt-carrossel-direita {
+    text-align: right;
+    max-width: 500px;
+}
+
+.txt-carrossel-direita h1 {
+    color: #fff;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 15px;
+}
+
+.txt-carrossel-direita p {
+    color: #8bb8ff;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+
+
+/* ==========================================
+   ESTILO SLIM & HIGH-CONTRAST (LINEAR / STRIPE)
+   ========================================== */
+
+.cypher-metrics {
+    padding: 80px 4%;
+    background-color: transparent;
+}
+
+.cypher-metrics .interface {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Grids de Métricas Estilo Stripe (Sem caixas pesadas, apenas texto limpo) */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    border-bottom: 1px solid rgba(139, 184, 255, 0.2);
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: #ffffff !important;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.metric-label {
+    color: #8bb8ff !important;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+}
+
+.metric-desc {
+    color: #e2ebfe !important;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+/* Feature Box Slim (Estilo Linear - Sem fundo pesado, borda ultra fina) */
+.linear-feature-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    background: rgba(8, 14, 26, 0.45); /* Leve toque translúcido apenas para separar do vídeo */
+    border: 1px solid rgba(139, 184, 255, 0.2);
+    border-radius: 12px;
+    padding: 40px;
+    backdrop-filter: blur(8px);
+}
+
+@media (max-width: 992px) {
+    .linear-feature-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feature-tag {
+    color: #8bb8ff !important;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.feature-content h2 {
+    color: #ffffff !important;
+    font-size: 28px;
+    margin: 10px 0 14px 0;
+    line-height: 36px;
+    font-weight: 700;
+}
+
+.feature-content p {
+    color: #e2ebfe !important;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.feature-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.spec-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff !important;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.spec-dot {
+    width: 5px;
+    height: 5px;
+    background-color: #8bb8ff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #8bb8ff;
+}
+
+/* ==========================================
+   CONSOLE / TERMINAL SLIM & CLARO (SEM PRETO)
+   ========================================== */
+
+.feature-console {
+    background: rgba(16, 28, 54, 0.75); /* Fundo azulado claro e translúcido (nada de preto escuro) */
+    border: 1px solid rgba(139, 184, 255, 0.4); /* Borda azul clara bem definida */
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.console-header {
+    background: rgba(22, 38, 72, 0.9); /* Barra superior mais clara */
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(139, 184, 255, 0.25);
+}
+
+.console-btn {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.console-btn.close { background: #ff5f56; }
+.console-btn.minimize { background: #ffbd2e; }
+.console-btn.expand { background: #27c93f; }
+
+.console-title {
+    color: #ffffff !important; /* Título totalmente branco, zero preto */
+    font-size: 11px;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.console-body {
+    padding: 20px;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.log-line {
+    margin-bottom: 6px;
+    color: #ffffff !important; /* FORÇA TODAS AS LETRAS A SEREM BRANCAS (Zero preto) */
+}
+
+/* Cores das tags e textos internos 100% visíveis sobre o fundo claro */
+.log-time { 
+    color: #9bc2ff !important; /* Azul claro brilhante para a hora */
+    font-weight: 500;
+} 
+
+.log-info { 
+    color: #38bdf8 !important; /* Azul celeste vivo */
+    font-weight: 700; 
+}
+
+.log-warn { 
+    color: #fde047 !important; /* Amarelo vivo altamente legível */
+    font-weight: 700; 
+}
+
+.log-danger { 
+    color: #ff9b9b !important; /* Vermelho claro suave */
+    font-weight: bold; 
+}
+
+.log-success { 
+    color: #4ade80 !important; /* Verde brilhante */
+    font-weight: 700; 
+}
+
+.log-alert { 
+    background: rgba(248, 113, 113, 0.3) !important; /* Fundo translúcido avermelhado para o alerta */
+    color: #ffffff !important; /* Texto interno estritamente branco */
+    padding: 3px 8px; 
+    border-radius: 4px; 
+    border: 1px solid rgba(248, 113, 113, 0.5);
+}
+
+/* Cores dos logs forçadas para máximo contraste e nitidez */
+.log-time { color: #8bb8ff !important; }
+.log-info { color: #38bdf8 !important; font-weight: 600; }
+.log-warn { color: #facc15 !important; font-weight: 600; }
+.log-danger { color: #ff9b9b !important; font-weight: bold; }
+.log-success { color: #52eea3 !important; font-weight: 600; }
+.log-alert { 
+    background: rgba(248, 113, 113, 0.25) !important; 
+    color: #ffffff !important;
+    padding: 2px 6px; 
+    border-radius: 3px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====================================================
+   DEMONSTRAÇÃO INTERATIVA ESTILO STRIPE CONNECT (CYPHER ADM)
+   ==================================================== */
+
+.cypher-stripe-demo {
+    padding: 100px 4%;
+    background: transparent;
+    overflow: hidden;
+}
+
+.cypher-stripe-demo .interface {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.demo-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 60px auto;
+}
+
+.demo-header .section-tag {
+    color: #8bb8ff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.demo-header h2 {
+    color: #ffffff;
+    font-size: 38px;
+    margin: 12px 0 16px 0;
+    line-height: 46px;
+}
+
+.demo-header p {
+    color: #c1d4f4;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* CONTAINER PRINCIPAL DA DEMONSTRAÇÃO */
+.stripe-interactive-wrapper {
+    position: relative;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 460px;
+}
+
+/* CARDS FLUTUANTES (TOOLTIPS AO REDOR DO DASHBOARD) */
+.floating-card {
+    position: absolute;
+    width: 270px;
+    background: rgba(10, 16, 30, 0.92);
+    border: 1px solid rgba(139, 184, 255, 0.3);
+    border-radius: 10px;
+    padding: 16px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+.floating-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: #8bb8ff;
+    box-shadow: 0 20px 40px rgba(139, 184, 255, 0.25);
+    z-index: 20;
+}
+
+/* POSICIONAMENTO PRECISO DOS BALÕES FLUTUANTES */
+.floating-card.top-left { top: 10px; left: 20px; }
+.floating-card.bottom-left { bottom: 20px; left: 20px; }
+.floating-card.top-right { top: 10px; right: 20px; }
+.floating-card.bottom-right { bottom: 20px; right: 20px; }
+
+@media (max-width: 1200px) {
+    .floating-card { position: relative; width: 100%; margin-bottom: 15px; }
+    .stripe-interactive-wrapper { display: flex; flex-direction: column; }
+}
+
+.card-badge {
+    display: inline-block;
+    background: rgba(139, 184, 255, 0.15);
+    color: #8bb8ff;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.card-badge.alert-badge { background: rgba(248, 113, 113, 0.25); color: #fca5a5; }
+.card-badge.success-badge { background: rgba(74, 222, 128, 0.25); color: #86efac; }
+
+.floating-card h4 {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.floating-card p {
+    color: #cbd5e1;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+.floating-card code {
+    display: block;
+    background: #060a12;
+    color: #8bb8ff;
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    border-left: 2px solid #8bb8ff;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* DASHBOARD CENTRAL (O PAINEL ADM) */
+.central-dashboard {
+    width: 100%;
+    max-width: 680px;
+    background: rgba(10, 16, 30, 0.9);
+    border: 1px solid rgba(139, 184, 255, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+    z-index: 5;
+}
+
+.dash-window-header {
+    background: #0f182d;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(139, 184, 255, 0.15);
+}
+
+.window-dots span {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background: #475569;
+}
+
+.window-url {
+    margin: 0 auto;
+    color: #8bb8ff;
+    font-size: 11px;
+    font-family: monospace;
+}
+
+.dash-body {
+    display: flex;
+    min-height: 320px;
+}
+
+.dash-sidebar {
+    width: 140px;
+    background: rgba(7, 13, 26, 0.8);
+    border-right: 1px solid rgba(139, 184, 255, 0.1);
+    padding: 16px 10px;
+}
+
+.dash-brand {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.dash-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nav-item {
+    color: #94a3b8;
+    font-size: 11px;
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+
+.nav-item.active {
+    color: #ffffff;
+    background: rgba(139, 184, 255, 0.2);
+    font-weight: 600;
+}
+
+.dash-main {
+    flex: 1;
+    padding: 16px;
+}
+
+.dash-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.mini-stat {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(139, 184, 255, 0.1);
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+
+.mini-stat small {
+    display: block;
+    color: #8bb8ff;
+    font-size: 9px;
+}
+
+.mini-stat strong {
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.text-danger { color: #fca5a5 !important; }
+.text-success { color: #86efac !important; }
+
+/* TABELA DO DASHBOARD */
+.dash-table {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.table-head {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 2fr 1fr;
+    color: #8bb8ff;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(139, 184, 255, 0.15);
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 2fr 1fr;
+    align-items: center;
+    padding: 8px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.row-danger {
+    background: rgba(248, 113, 113, 0.15);
+    border: 1px solid rgba(248, 113, 113, 0.35);
+}
+
+.host-ip { color: #94a3b8; font-size: 10px; }
+
+.status-pill {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.status-ok { color: #4ade80; }
+.status-isolated { color: #f87171; }
+
+.btn-dash {
+    background: rgba(139, 184, 255, 0.1);
+    border: 1px solid rgba(139, 184, 255, 0.3);
+    color: #8bb8ff;
+    font-size: 9px;
+    padding: 3px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-action {
+    background: #8bb8ff;
+    color: #0a1120;
+    font-weight: 700;
+}
+
+
+
+
+/* ==========================================================
+   IMAGEM "DO NADA" - RESPEITANDO OS LIMITES LATERAIS
+   ========================================================== */
+
+.cypher-raw-image-section {
+    padding: 80px 4%;
+    background-color: transparent;
+}
+
+.cypher-raw-image-section .interface {
+    max-width: 1200px; /* Controla a largura máxima que a imagem pode atingir na tela */
+    margin: 0 auto;
+}
+
+/* Contentor que dá o efeito de profundidade e flutuação sem molduras pesadas */
+.raw-image-wrapper {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+
+/* A imagem em si, adaptada perfeitamente aos limites */
+.cypher-edge-img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   PENÚLTIMA SECÇÃO: LETRAS GIGANTES (ESTILO LINEAR)
+   ========================================================== */
+
+.cypher-cta-gigante {
+    padding: 120px 4%;
+    background-color: transparent;
+    text-align: center;
+}
+
+.cypher-cta-gigante .interface {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cta-titulo-gigante {
+    color: #ffffff !important;
+    font-size: 52px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .cta-titulo-gigante {
+        font-size: 34px;
+    }
+}
+
+.cta-botoes-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Botões com o padrão visual do site */
+/* ==========================================================
+   ESTILO ORIGINAL DOS BOTÕES (ESTADO ANTERIOR)
+   ========================================================== */
+
+.btn-contato button {
+    padding: 10px 28px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    
+    background: rgba(15, 23, 42, 0.6); 
+    color: #ffffff; /* Garante o texto branco legível e normal */
+    
+    transition: all 0.3s ease;
+}
+
+.btn-contato button:hover {
+    background: rgba(139, 184, 255, 0.2);
+    border-color: #8bb8ff;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================
+   RODAPÉ FINAL (ESTILO RABBIT - SLIM & REDES SOCIAIS)
+   ========================================================== */
+
+.cypher-footer {
+    padding: 40px 4%;
+    background: rgba(8, 14, 26, 0.6); /* Translúcido para ver o vídeo de fundo */
+    border-top: 1px solid rgba(139, 184, 255, 0.15);
+    backdrop-filter: blur(8px);
+}
+
+.cypher-footer .interface.footer-flex {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Ícones de redes sociais (E-mail e Instagram) */
+.footer-socials {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.social-icon-link {
+    color: #8bb8ff !important;
+    background: rgba(139, 184, 255, 0.1);
+    border: 1px solid rgba(139, 184, 255, 0.25);
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+}
+
+.social-icon-link:hover {
+    background: #8bb8ff !important;
+    color: #070d1a !important;
+    border-color: #8bb8ff;
+    transform: translateY(-2px);
+}
+
+/* Links do Rodapé */
+.footer-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #c1d7ff !important;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff !important;
+}
+
+/* Copyright */
+.footer-copy {
+    color: #8bb8ff !important;
+    font-size: 13px;
+    font-family: monospace;
+}
+
+/* Responsividade do rodapé para telemóveis */
+@media (max-width: 768px) {
+    .cypher-footer .interface.footer-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
